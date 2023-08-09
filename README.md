@@ -68,7 +68,9 @@ node app.js
 
 至此，本地运行项目成功
 
-浏览器输入http://localhost:8080或者
+浏览器输入http://localhost:8080  
+
+或者
 
 [点击此处](http://localhost:8080) 
 
