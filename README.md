@@ -1,3 +1,10 @@
+<div style="text-align: center">
+    <img width="160px" style="border-radius: 25%" src="./bailu.jpg"><br><br><br>
+    <img src="https://img.shields.io/badge/node-%3E=4.0-green">
+    <img src="https://img.shields.io/badge/npm-%3E=4.0-green">
+    <img src="https://img.shields.io/badge/license-MIT-red">
+</div>
+
 # 介绍
 
 ## 快速体验
@@ -49,7 +56,7 @@
 
 
 ```js
-npm init
+npm install
 ```
 
 - 运行项目入口文件
