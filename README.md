@@ -10,9 +10,6 @@
 ## 快速体验
 - 演示网站：http://tv.agety.cn
 
-### 项目地址
-  - 海外访问：
-  - 大陆访问：
 ## 功能简介
 
 `jinyou_TV`后端逻辑处理是基于`node.js`框架编写,使用了多个第三方库([express](https://www.expressjs.com.cn/)、[cors](https://www.npmjs.com/package/cors)、[multer](https://www.npmjs.com/package/multer)等...)结合开发,更有利于项目的维护管理。前端由原生的`html`、`css`、`javascript`。能够满足该项目的需求。下面是简单功能介绍，还有更多细节无法一一介绍，需要你自己下载并安装才能体验。
