@@ -1,0 +1,283 @@
+:root {
+    --primary-color: #007bff;
+    /* 主要颜色 */
+    --secondary-color: #6c757d;
+    /* 次要颜色 */
+    --info-color: #17a2b8;
+    /* 信息颜色 */
+    --light-color: #f8f9fa;
+    /* 浅色背景颜色 */
+    --dark-color: #343a40;
+    /* 深色背景颜色 */
+    --link-color: #007bff;
+    /* 链接颜色 */
+    --text-color: #333;
+    /* 文本颜色 */
+    --success-color: #28a745;
+    /* 成功颜色 */
+    --warning-color: #ffc107;
+    /* 警告颜色 */
+    --danger-color: #dc3545;
+    /* 危险颜色 */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    user-select: none;
+}
+
+body {
+    font-size: 15px;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to left bottom, hsl(89, 100%, 85%) 0%, hsl(158, 100%, 85%) 100%);
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.content {
+    flex: 1;
+    margin: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #34495e
+}
+
+.logo {
+    width: 100px;
+}
+
+.logo img {
+    max-width: 100%;
+    border-radius: 50%;
+}
+
+.anchor {
+    color: inherit;
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin: 0.625rem 0 2.5rem;
+    position: relative;
+    text-align: center;
+}
+
+.anchor small {
+    bottom: -0.4375rem;
+    font-size: 1rem;
+    position: absolute;
+}
+
+.content blockquote {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.content ul {
+    text-align: center;
+    line-height: 1.8;
+    list-style-type: none;
+    margin: 1em auto;
+    max-width: 500px;
+    padding: 0;
+}
+
+.content-btn a {
+    border-radius: 2rem;
+    border: 1px solid #42b983;
+    box-sizing: border-box;
+    display: inline-block;
+    font-size: 1.05rem;
+    letter-spacing: .1rem;
+    margin: 0.5rem 1rem;
+    padding: 0.75em 2rem;
+    text-decoration: none;
+    transition: all .15s ease;
+    color: #42b983;
+}
+
+.content-btn a:hover {
+    color: inherit;
+}
+
+.content-btn a:last-child {
+    background-color: #42b983;
+    color: #fff;
+}
+
+.content-btn a:last-child:hover {
+    color: inherit;
+    opacity: .8;
+}
+
+/* 模态框 */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.modal-content {
+    border-radius: 0.3rem;
+    background-color: #fff;
+    margin: 30% auto;
+    padding: 20px;
+    border: 1px solid #888;
+
+}
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-content p {
+    padding: 1rem 0;
+}
+
+.modal-content p span {
+    color: var(--warning-color);
+}
+
+/* 上传文件样式 */
+/* 隐藏默认样式 */
+input[type="file"] {
+    display: none;
+}
+form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+/* 自定义样式 */
+.custom-file-upload,
+.btn-green {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #42b983;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 0.5rem ;
+}
+.custom-file-upload:hover,
+.btn-green:hover {
+    background-color: #3ca576;
+}
+.custom-file-upload:active,
+.btn-green:active {
+    background-color: #339267;
+}
+/* 进度条 */
+.progress-bar {
+    width: 80%;
+    height: 10px;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-top: 1rem;
+}
+.progress {
+    width: 20%;
+    height: 100%;
+    background-color: #007bff;
+    transition: width 0.3s ease-in-out;
+}
+.none{
+    display: none;
+}
+#file-names{
+    text-align: center;
+    color: var(--success-color);
+    margin: 1rem 0;
+}
+.tips{
+    color: var(--danger-color);
+    font-size: 0.1rem;
+}
+/* 手机端样式 */
+@media (max-width: 767px) {
+    /* 在屏幕宽度小于等于767px时应用的样式 */
+    /* 例如，设置手机端的字体大小和布局等 */
+    .modal-content {
+        margin: 30% auto;
+        width: 80%;
+    }
+    .content-btn{
+        display: flex;
+        flex-direction: column;
+    }
+  }
+  /* 电脑端样式 */
+@media (min-width: 768px) {
+    /* 在屏幕宽度大于等于768px时应用的样式 */
+    /* 例如，设置电脑端的字体大小和布局等 */
+    .modal-content {
+        width: 40%;
+        margin: 12% auto;
+    }
+}
+/* 小姐姐视频页面 */
+
+#videoPlayer {
+    width: 100%;
+    max-width: 500px;
+    /* border: 1px solid #ccc;
+    border-radius: 5px; */
+  }#videoPlayer::-webkit-media-controls {
+    display: none;
+  }#videoPlayer::-webkit-media-controls-enclosure {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    padding: 10px;
+  }#videoPlayer::-webkit-media-controls-play-button {
+    background-color: #fff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+  }#videoPlayer::-webkit-media-controls-play-button::before {
+    content: '\25B6';
+    font-size: 30px;
+    line-height: 50px;
+    text-align: center;
+    display: block;
+  }#videoPlayer::-webkit-media-controls-timeline {
+    height: 5px;
+    background-color: #ccc;
+    border-radius: 2px;
+  }#videoPlayer::-webkit-media-controls-current-time-display,
+  #videoPlayer::-webkit-media-controls-time-remaining-display {
+    color: #fff;
+    font-size: 12px;
+    margin-top: 5px;
+  }#videoPlayer::-webkit-media-controls-mute-button,
+  #videoPlayer::-webkit-media-controls-volume-slider {
+    display: none;
+  }

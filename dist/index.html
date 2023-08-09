@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>jinyou_TV</title>
+</head>
+
+<body>
+    <main>
+        <div class="content">
+            <!-- logo图片 -->
+            <div class="logo">
+                <a href="#">
+                    <img src="./images/logo.jpg" alt="logo">
+                </a>
+            </div>
+            <h1 class="anchor">
+                <span>jinyou_TV <small>1.0.0</small></span>
+            </h1>
+            <!-- 描述标题 -->
+            <blockquote>一个随机播放的神器</blockquote>
+            <!-- 描述列表 -->
+            <ul>
+                <li>高清、稳定、快速</li>
+                <li>有多种类型可选、支持自定义上传</li>
+                <li>治愈、清新、可爱</li>
+            </ul>
+            <!-- 按钮 -->
+            <div class="content-btn">
+                <a href="https://github.com/ljy532126" target="_blank">GitHub</a>
+                <a id="openModalBtn">开始上传</a>
+                <a href="http://tv.agety.cn/xjj.html" target="_blank">立即体验</a>
+            </div>
+            <!-- 模态框 -->
+            <div id="modal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2>请选择视频文件</h2>
+                    <p><span>注意：</span>文件支持MP4格式</p>
+                    <form action="#">
+                        <label for="file-upload" class="custom-file-upload">选择文件</label>
+                        <input id="file-upload" type="file" multiple>
+                        <!-- <div class="progress-bar">
+                            <div class="progress"></div>
+                        </div> -->
+                        <div id="submit" class="btn-green">开始上传</div>
+                        <div id="file-names"></div>
+                    </form>
+                    <div class="tips"><span>注意：</span>请勿上传无关视频噢！！！</div>
+                </div>
+            </div>
+    </main>
+</body>
+<script src="./js/index.js"></script>
+</html>

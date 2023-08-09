@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="./css/style.css">
+    <title>放松一下</title>
+</head>
+
+<body>
+    <video id="videoPlayer" controls></video>
+    <div class="content-btn">
+        <a id="playButton">点击播放</a>
+    </div>
+    <script>
+        const playButton = document.getElementById('playButton');
+        const videoPlayer = document.getElementById('videoPlayer');
+        let videoUrl = 'http://127.0.0.1:8080/xjj'; // 替换为实际的视频流 URL    
+        playButton.addEventListener('click', () => {
+            playButton.style.display = "none"
+            fetch(videoUrl)
+                .then(response => response.json())
+                .then(data => {
+                    const videoPath = data.videoUrl;
+                    videoPlayer.src = videoPath;
+                    videoPlayer.play();
+                })
+                .catch(error => {
+                    console.error(error);
+                });
+        }); 
+        videoPlayer.addEventListener('ended', () => {
+            playButton.click(); // 触发点击播放按钮的事件，获取下一个随机视频链接并播放
+        }); 
+        videoPlayer.addEventListener('play', () => {
+            videoPlayer.controls = false;
+        });
+    </script>
+</body>
+
+</html>
